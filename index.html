@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>PUP Hymn</title>
+	</head>
+	
+	<script>
+		var music = document.getElementById("audio");
+		music.onplaying = function(){
+			alert("The audio has ended");
+			var lyrics = document.getElementById("marq");
+			lyrics.start();
+		};
+		music.onpause = function(){
+			
+			var lyrics = document.getElementById("marq");
+			lyrics.stop();
+		};
+	</script>
+		
+	<body onload="toggleMarquee()">
+		<img src="header.png" height=100px>
+	
+		<h1 align="center" style="color:maroon;">
+			PUP HYMN
+		</h1>
+		
+		
+		<p align="center" style="color:white;">
+		<marquee id ="marq" bgcolor="maroon" width="50%" height=450px behavior="scroll" direction="up" style="font-size:20px;" scrollamount="1" loop="0">
+			<p style="padding-left:20px">
+			
+			Sintang Paaralan<br><br>
+			Tanglaw ka ng bayan<br><br>
+			Pandayan ng isip ng kabataan<br><br>
+			Kami ay dumating nang salat sa yaman<br><br>
+			Hanap na dunong ay iyong alay<br><br>
+			Ang layunin mong makatao<br><br>
+			Dinarangal ang Pilipino<br><br>
+			Ang iyong aral, diwa, adhikang taglay<br><br>
+			PUP, aming gabay<br><br>
+			Paaralang dakila<br><br>
+			PUP, pinagpala<br><br>
+			Gagamitin ang karunungan<br><br>
+			Mula sa iyo, para sa bayan<br><br>
+			Ang iyong aral, diwa, adhikang taglay<br><br>
+			PUP, aming gabay<br><br>
+			Paaralang dakila<br><br>
+			PUP, pinagpala<br><br>
+			</p>
+		</marquee>
+		</p>
+		
+		
+		<div align="center">
+		<audio id="audio" controls>
+			<source src="PUPHYMN.mp3" type="audio/mpeg">
+			Your browser does not support the audio element.
+		</audio>
+		</div>
+		
+	</body>
+</html>
